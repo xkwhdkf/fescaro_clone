@@ -1,0 +1,17 @@
+.main_visual{overflow: hidden;position: relative;width: 100%;height: 100vh;}
+.spot{position: absolute;left: 0;top: 0;width: 100%;height: calc(100vh - 80px); background: #eee url(../images/sub_visual_contact.jpg) no-repeat 100% 0;background-size: cover;transition: all 2.5s linear;}
+/* .main_visual.on .spot{scale: 2;} */
+.main_visual .txt{overflow: hidden;position: absolute;left:50%;top: 50%;transform: translate(-50%,-50%);width: 100%;text-align: center;transition: all .5s linear;}
+#container .txt h2{font-size: 7rem;}
+.txt p{font-size: 2rem;font-weight: 600;color: #fff;}
+.main_visual.on .txt{opacity: 0;height: 0;width: 0;}
+
+.menu_wrap{z-index: 11;position: absolute;bottom: 0;width: 100%;transition: all .5s linear;}
+.main_visual.on .menu_wrap{position: fixed;left: 0;top: 0;height: 80px;}
+ul.menu{display: flex;justify-content:space-between;align-items: center;z-index: 11;width: 100%;height: 80px;box-sizing: border-box;background: #fff;}
+ul.menu.on_top{border-bottom: 1px solid #ddd;}
+#container ul.menu>li{flex: 1;position: relative;height: 100%;}
+#container ul.menu>li>a{display: block;line-height: 80px;font-size: 17px;color: #333;text-align: center;transition: all .3s linear 0s;}
+#container ul.menu>li>a.on,#container>ul.menu>li>a:hover{color: #00AFEB;}
+#container ul.menu>li>a::after{content: "";position: absolute;left: 50%;bottom: 0;width: 0;height: 2px;transition: all .3s linear 0s;background: #00AFEB;}
+#container ul.menu>li>a:hover::after,#container ul.menu>li>a.on::after{display: block;left: 0;width: 100%;}

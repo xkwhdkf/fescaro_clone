@@ -1,0 +1,64 @@
+/* header */
+#header h1{width: 162px;height: 36px;overflow: hidden;text-indent: -9999px;background: url(../images/logo.png) no-repeat 0 0;}
+h1>a{display: block;height: 100%;}
+.header_inner p,.header_inner a{color: #fff;}
+/* header 변화 */
+#wrap.black h1{background-image: url(../images/logo_b.png);}
+#wrap.black .turn_black::before, #wrap.black .turn_black::after{background: #000;}
+.gnb.on .gnb_inner::after{opacity: 1;border-bottom: 1px solid #eaeaea;}
+/* header 고정 */
+#header{transition: all .5s linear;}
+#header.fix{position: absolute;}
+/* 탑메뉴 */
+.top_menu{padding-left: 30px;}
+.top_menu dd{position: relative;float: left;}
+#header .top_menu dd>a{display: block;font-size: 12px;font-weight: 700;line-height: 36px;color: #d7dfe4;}
+.top_menu dd:first-of-type{margin-right: 10px;}
+.top_menu a.on::after{content: "";position: absolute;left: 50%;bottom: 6px;width: 100%;height: 2px;background: #fff;transform: translateX(-50%);}
+.gnb.on .dimm{position: fixed;z-index: -1; width: 100vw;height: 100vh;background:rgba(0,0,0,.3);}
+/* gnb */
+.gnb_inner{overflow: hidden;max-height: 100%;transition: all .3s ease;padding-top: 32px;box-sizing: border-box;}
+.gnb.on .gnb_inner{max-height: 650px;background: #fff;}
+
+.gnb>.gnb_inner>ul{display: flex;flex-direction: row;justify-content: center;height: 100%;}
+.gnb>.gnb_inner>ul>li{width: 14.6rem;height: 100%;padding: 0 1rem;transition: all .3s linear}
+.gnb.on>.gnb_inner>ul>li{padding: 0 2rem;}
+.gnb>.gnb_inner>ul>li h3 a{display: block;position: relative;line-height: 132px;font-size: 1.5rem;font-weight: 700;transition: all .3s ease;}
+.gnb.on>.gnb_inner>ul>li h3 a{opacity: 1;}
+.gnb .gnb_inner>ul>li h3 a::after{content: "";display: block;position: absolute;left: 50%;width: 0px;height: 2px;transition: all .3s linear 0s;background: #00AFEB;}
+#header .gnb .gnb_inner>ul>li.on>h3>a{color: #00AFEB;}
+.gnb_inner>ul>li h3 a:hover::after{display: block;left: 0;width: 100%;}
+
+.gnb_inner::after{content: "";opacity: 0;position: absolute;left: 0;bottom: 0;display: block;width: 100%;height:0px;transition: all .5s ease;}
+
+.gnb .depth2{opacity: 0;margin: 40px 0;transition: all .5s linear .2s;}
+.gnb.on .depth2{opacity: 1;}
+.depth2 a{display: block;width: 100%;margin-bottom: 20px;}
+.header_inner .depth2>li a{color: #333;font-size: 1.5rem;}
+#header .depth3 a{font-size: 1.4rem;font-weight: normal;color: #999;}
+/* sitemap */
+.btn_sitemap{position: absolute;right: 8rem;top: 50%;transform: translateY(-50%);z-index: 33;width: 42px;height: 13px;cursor: pointer;}
+
+.btn_sitemap::before{content: "";display: block;position: absolute;right: 0;top: 0;width: 100%;height: 3px;background: #fff;}
+.btn_sitemap::after{content: "";display: block;position: absolute;right: 0;bottom: 0;width: 70%;height: 3px;background: #fff;}
+
+.sitemap a{color: #fff;}
+.sitemap{z-index: 44;display: flex;opacity: 0; justify-content: center;align-items: center;position: fixed;left: 0;top: 0;width: 100%;height: 100vh;background: #000;box-shadow: 0 0 20px 200vh rgba(0,0,0,0.3);transform: translateX(100%);transition: all .5s ease;}
+.sitemap.on{opacity: 1;transform: translateX(0);}
+
+.sitemap .sitemap_inner{display: flex;flex-direction: column;position: relative;width: 70%;height: 70%;padding-bottom: 40px;box-sizing: border-box;}
+
+.sitemap h2{font-size: 5.5rem;font-weight: 700;color: #fff;}
+.sitemap .btn_close{position: relative;width: 40px;height: 40px;background: #fff;border-radius: 50%;cursor: pointer;}
+.sitemap .btn_close::before,.sitemap .btn_close::after{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 1px;height: 50%;background: #000;}
+.sitemap .btn_close::before{transform: translate(-50%,-50%) rotate(45deg);}
+.sitemap .btn_close::after{transform: translate(-50%,-50%) rotate(-45deg);}
+
+.sitemap .sitemap_wrap{display: flex;justify-content: space-between;align-items: center;width: 100%;margin-bottom: 80px;}
+
+.sitemap .sitemap_inner>ul{display: flex;justify-content: space-between;flex: 1;width: 100%;}
+.sitemap .sitemap_inner>ul>li{width: calc(100% / 6); height: 100%;padding: 0 24px;border-left: 1px solid rgba(255,255,255,0.1);box-sizing: border-box;}
+.sitemap .sitemap_inner>ul>li:last-of-type{border-right: 1px solid rgba(255,255,255,0.1);}
+.sitemap .sitemap_inner>ul>li>h3{display: flex; margin: 80px 0;font-size: 2.8rem;}
+.sitemap .sitemap_inner>ul>li>ul>li{padding: 10px 0;}
+.sitemap .sitemap_inner>ul>li>ul>li>a{display: block;height: 100%;font-size: 1.6rem;font-weight: normal;letter-spacing: -2px;}

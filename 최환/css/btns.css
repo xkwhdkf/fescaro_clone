@@ -1,0 +1,17 @@
+.btns{z-index: 1;position: fixed;right: 8rem;bottom: 5%;width:40px;height: 40px;transition: all ease .3s;}
+
+.btns.fix{position: absolute;}
+.btns div{overflow: hidden;position: absolute;right: 0;width: 40px;height: 40px;box-sizing: border-box;border: 1px solid #eee;box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);background: #fff;border-radius: 20px;transition: all .3s ease;}
+.btns .btn_top{bottom: 0;}
+.btn_contact{z-index: 11;}
+.btns .btn_contact:hover{width: 140px;}
+.btn_contact span{opacity: 0;line-height: 40px;transition: all .3s ease;}
+.btns a{display: block;position: absolute;width: 100%;height: 40px;text-align: center;font-size: 14px;}
+.btns i{position: absolute;right: 20px;top: 20px; transform: translate(50%,-50%);transition: all .3s ease;}
+.btn_top i{font-size: 1.8rem;}
+.btn_contact:hover a{width: 100%;}
+.btn_contact:hover span{opacity: 1;display: inline-block;position: absolute;left: 20px;}
+.btn_top:hover i{top: 18px;}
+.btns.active{height: 100px;}
+
+.btns p,.btns a,.btns i{opacity: 1;color: #333;}

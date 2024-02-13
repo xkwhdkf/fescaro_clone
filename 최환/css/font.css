@@ -1,0 +1,9 @@
+/* Nanum Gothic */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* s-core_dream */
+@font-face {
+  font-family: s-core_dream;
+  src: url(../font/S-Core_Dream_OTF/SCDream4.otf);
+}
